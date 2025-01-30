@@ -37,8 +37,6 @@
     "no-useless-computed-key": "error",
     "quote-props": ["error", "as-needed"],
     "no-unused-expressions": "error",
-    // Queria na verdade configurar que "ou é tudo em uma linha ou é tudo em várias linhas", mas não consegui.
-    // Esse foi o mais próximo disso que consegui
     "object-curly-newline": ["error", {
       "ObjectExpression": { "multiline": true, "minProperties": 5, "consistent": true },
       "ObjectPattern": { "multiline": true, "minProperties": 5, "consistent": true },
