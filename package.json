@@ -1,8 +1,16 @@
 {
   "name": "@vellone/techsak",
-  "version": "1.0.2",
+  "version": "1.1.0-2",
   "description": "matheusvellone's personal tech sak (swiss army knife)",
   "keywords": [],
   "author": "matheusvellone",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-unicorn": "^56.0.1",
+    "typescript-eslint": "^8.22.0"
+  }
 }
