@@ -1,5 +1,5 @@
 import { FlatCompat } from '@eslint/eslintrc'
-import eslintConfig from './.eslintrc.json'
+import eslintConfig from './.eslintrc.json' with { type: "json" }
 
 const compat = new FlatCompat()
 
