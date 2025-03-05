@@ -67,10 +67,10 @@ export default tseslint.config(
       // Queria na verdade configurar que 'ou é tudo em uma linha ou é tudo em várias linhas', mas não consegui.
       // Esse foi o mais próximo disso que consegui
       'object-curly-newline': ['error', {
-        ObjectExpression:  { multiline: true, minProperties: 5,  consistent: true },
-        ObjectPattern:     { multiline: true, minProperties: 5,  consistent: true },
+        ObjectExpression: { multiline: true, minProperties: 5, consistent: true },
+        ObjectPattern: { multiline: true, minProperties: 5, consistent: true },
         ImportDeclaration: { multiline: true, minProperties: 50, consistent: true },
-        ExportDeclaration: { multiline: true, minProperties: 5,  consistent: true },
+        ExportDeclaration: { multiline: true, minProperties: 5, consistent: true },
       }],
       'object-property-newline': ['error', {
         allowAllPropertiesOnSameLine: true,
@@ -136,6 +136,14 @@ export default tseslint.config(
       '@typescript-eslint/no-empty-object-type': 'error',
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-floating-promises': 'error',
+      '@typescript-eslint/no-misused-promises': [
+        'error',
+        {
+          'checksVoidReturn': {
+            'attributes': false
+          }
+        }
+      ],
       '@typescript-eslint/no-inferrable-types': 'error',
       'no-loop-func': 'off',
       '@typescript-eslint/no-loop-func': 'error',
