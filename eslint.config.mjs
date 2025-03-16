@@ -3,28 +3,38 @@ import tseslint from 'typescript-eslint'
 import importPlugin from 'eslint-plugin-import'
 import comments from '@eslint-community/eslint-plugin-eslint-comments/configs'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
+import js from '@eslint/js'
 
 export default tseslint.config(
-  eslint.configs.recommended,
-  tseslint.configs.recommendedTypeChecked,
   {
     languageOptions: {
       parserOptions: {
         projectService: true,
       },
     },
+    settings: {
+      "import/resolver": {
+        typescript: {}
+      },
+    },
   },
-  // {
-  //   files: ['**/*.{ts,tsx}'],
-  //   extends: [importPlugin.flatConfigs.recommended, importPlugin.flatConfigs.typescript],
-  //   // other configs...
-  // },
+  js.configs.recommended,
+  eslint.configs.recommended,
+  tseslint.configs.recommendedTypeChecked,
+  importPlugin.flatConfigs.recommended,
+  importPlugin.flatConfigs.typescript,
   comments.recommended,
-  eslintPluginUnicorn.configs['flat/recommended'],
+  eslintPluginUnicorn.configs.recommended,
   {
     rules: {
       'array-callback-return': 'error',
-      'comma-dangle': ['error', 'always-multiline'],
+      'comma-dangle': ['error', {
+        'arrays': 'always-multiline',
+        'objects': 'always-multiline',
+        'imports': 'always-multiline',
+        'exports': 'always-multiline',
+        'functions': 'never'
+      }],
       curly: 'error',
       'default-case-last': 'error',
       'default-case': 'off',
@@ -37,7 +47,6 @@ export default tseslint.config(
       }],
       'no-alert': 'error',
       'no-console': 'error',
-      'no-duplicate-imports': 'error',
       'no-else-return': 'error',
       'no-eval': 'warn',
       'no-extra-semi': 'error',
@@ -94,18 +103,21 @@ export default tseslint.config(
       yoda: 'error',
     },
   },
-  // {
-  //   rules: {
-  //     'import/no-deprecated': 'error',
-  //     'import/no-anonymous-default-export': [0],
-  //     'import/no-unused-modules': ['error', {
-  //       unusedExports: true,
-  //       ignoreExports: [
-  //         './src/app',
-  //       ],
-  //     }],
-  //   },
-  // },
+  {
+    name: 'Errors',
+    rules: {
+      'import/no-deprecated': 'error',
+      'import/no-anonymous-default-export': [0],
+      'no-duplicate-imports': 'off',
+      'import/no-duplicates': 'error',
+      'import/no-unused-modules': ['error', {
+        unusedExports: true,
+        ignoreExports: [
+          './src/app',
+        ],
+      }],
+    },
+  },
   {
     // TypeScript ESLint specific rules
     // https://typescript-eslint.io/rules/
