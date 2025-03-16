@@ -104,7 +104,6 @@ export default tseslint.config(
     },
   },
   {
-    name: 'Errors',
     rules: {
       'import/no-deprecated': 'error',
       'import/no-anonymous-default-export': [0],
