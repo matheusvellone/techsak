@@ -2,8 +2,12 @@
   "name": "@vellone/techsak",
   "version": "1.1.8",
   "description": "matheusvellone's personal tech sak (swiss army knife)",
-  "keywords": [],
+  "keywords": ["makefile","editorconfig","eslint"],
   "author": "matheusvellone",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matheusvellone/techsak"
+  },
   "license": "MIT",
   "peerDependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
