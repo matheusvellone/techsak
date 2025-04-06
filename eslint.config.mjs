@@ -105,7 +105,6 @@ export default tseslint.config(
   },
   {
     rules: {
-      'import/no-deprecated': 'error',
       'import/no-anonymous-default-export': [0],
       'no-duplicate-imports': 'off',
       'import/no-duplicates': 'error',
@@ -123,6 +122,9 @@ export default tseslint.config(
     rules: {
       'require-await': 'off',
       '@typescript-eslint/require-await': 'error',
+
+      'import/no-deprecated': 'off',
+      '@typescript-eslint/no-deprecated': 'error',
 
       '@typescript-eslint/await-thenable': 'error',
       '@typescript-eslint/array-type': ['error', {
