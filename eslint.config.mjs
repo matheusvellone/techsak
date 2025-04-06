@@ -159,7 +159,7 @@ export default tseslint.config(
       'no-loop-func': 'off',
       '@typescript-eslint/no-loop-func': 'error',
       'no-redeclare': 'off',
-      '@typescript-eslint/no-redeclare': 'error',
+      '@typescript-eslint/no-redeclare': 'off',
       '@typescript-eslint/no-require-imports': 'error',
       '@typescript-eslint/no-unnecessary-condition': 'error',
       'no-unused-expressions': 'off',
