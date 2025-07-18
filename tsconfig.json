@@ -10,6 +10,6 @@
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-  },
+    "noUnusedParameters": true
+  }
 }

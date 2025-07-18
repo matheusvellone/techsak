@@ -21,16 +21,13 @@ include ./node_modules/@vellone/techsak/Makefile
 Run `make .editorconfig` to copy this project's `.editorconfig` to your project.
 
 ## Eslint Config
-Add the following code in your `.eslintrc.json` to include this project's ESLint configuration:
+Add the following code in your `.eslintrc.mts` to include this project's ESLint configuration:
 
-```json
+```ts
 {
-  "extends": [
-    "./node_modules/@vellone/techsak/.eslintrc.json"
-  ]
+  export { default } from '@vellone/techsak/eslint.config.mjs'
 }
 ```
-
 
 ## TSConfig
 

@@ -3,6 +3,23 @@ import antfu from '@antfu/eslint-config'
 export default antfu({
   typescript: {
     tsconfigPath: './tsconfig.json',
+    overridesTypeAware: {
+      'ts/no-unnecessary-condition': 'error',
+      'ts/no-floating-promises': 'error',
+      'ts/no-misused-promises': [
+        'error',
+        {
+          checksVoidReturn: {
+            attributes: false,
+          },
+        },
+      ],
+
+      'import/no-deprecated': 'off',
+      'ts/no-deprecated': 'error',
+
+      'ts/await-thenable': 'error',
+    },
   },
 
   react: true,
@@ -13,8 +30,14 @@ export default antfu({
     quotes: 'single',
     semi: false,
     jsx: true,
+    overrides: {
+      'style/quotes': ['error', 'single', {
+        avoidEscape: true,
+      }],
+    },
   },
-
+}, {
+  name: 'vellone/all',
   rules: {
     'antfu/top-level-function': 'off',
 
@@ -47,26 +70,12 @@ export default antfu({
     'ts/array-type': ['error', {
       default: 'array-simple',
     }],
-    'ts/no-unused-vars': [
-      'error'
-    ],
+    'ts/no-unused-vars': 'error',
     'ts/no-explicit-any': 'error',
-    'ts/no-floating-promises': 'error',
-    'ts/no-misused-promises': [
-      'error',
-      {
-        'checksVoidReturn': {
-          'attributes': false
-        }
-      }
-    ],
     'ts/no-inferrable-types': 'error',
     'no-redeclare': 'off',
     'ts/no-redeclare': 'off',
-    'ts/no-unnecessary-condition': 'error',
-    'import/no-deprecated': 'off',
-    'ts/no-deprecated': 'error',
-    'ts/await-thenable': 'error',
+
     'ts/consistent-generic-constructors': 'error',
     'ts/method-signature-style': ['error', 'property'],
     'ts/no-empty-object-type': 'error',
