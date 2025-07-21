@@ -1,6 +1,10 @@
 import antfu from '@antfu/eslint-config'
 
 export default antfu({
+  linterOptions: {
+    reportUnusedDisableDirectives: 'error',
+  },
+
   typescript: {
     tsconfigPath: './tsconfig.json',
     overridesTypeAware: {
@@ -82,7 +86,6 @@ export default antfu({
     'no-loop-func': 'off',
     'ts/no-loop-func': 'error',
 
-    'eslint-comments/no-unused-disable': 'error',
     'eslint-comments/no-use': ['error', {
       allow: [
         'eslint-disable-next-line',
