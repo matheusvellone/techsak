@@ -25,7 +25,7 @@ Add the following code in your `.eslintrc.mts` to include this project's ESLint 
 
 ```ts
 {
-  export { default } from '@vellone/techsak/eslint.config.mjs'
+  export { default } from '@vellone/techsak/eslint'
 }
 ```
 
