@@ -26,6 +26,7 @@ export default antfu({
     },
   },
 
+  nextjs: true,
   react: true,
   jsx: true,
 
