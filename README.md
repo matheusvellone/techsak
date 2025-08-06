@@ -24,9 +24,7 @@ Run `make .editorconfig` to copy this project's `.editorconfig` to your project.
 Add the following code in your `.eslintrc.mts` to include this project's ESLint configuration:
 
 ```ts
-{
-  export { default } from '@vellone/techsak/eslint'
-}
+export { default } from '@vellone/techsak/eslint'
 ```
 
 ## TSConfig
