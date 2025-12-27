@@ -23,6 +23,7 @@ export default antfu({
       'ts/no-deprecated': 'error',
 
       'ts/await-thenable': 'error',
+      'ts/return-await': ['error', 'always'],
     },
   },
 
