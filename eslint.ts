@@ -46,6 +46,7 @@ export default antfu({
   name: 'vellone/all',
   rules: {
     'antfu/top-level-function': 'off',
+    'jsonc/sort-keys': 'off',
 
     'style/multiline-ternary': 'off',
     'style/jsx-one-expression-per-line': 'off',
