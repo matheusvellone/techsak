@@ -21,7 +21,7 @@ include ./node_modules/@vellone/techsak/Makefile
 Run `make .editorconfig` to copy this project's `.editorconfig` to your project.
 
 ## Eslint Config
-Add the following code in your `.eslintrc.mts` to include this project's ESLint configuration:
+Add the following code in your `eslint.config.mjs` to include this project's ESLint configuration:
 
 ```ts
 export { default } from '@vellone/techsak/eslint'
