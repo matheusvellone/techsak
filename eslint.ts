@@ -48,6 +48,8 @@ export default antfu({
     'antfu/top-level-function': 'off',
     'jsonc/sort-keys': 'off',
 
+    curly: ['error', 'all'],
+
     'style/multiline-ternary': 'off',
     'style/jsx-one-expression-per-line': 'off',
     'style/comma-dangle': ['error', {
