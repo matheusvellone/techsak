@@ -1,6 +1,8 @@
 import antfu from '@antfu/eslint-config'
 
-export default antfu({
+type Options = Parameters<typeof antfu>[0]
+
+export default (options: Options = {}) => antfu({
   linterOptions: {
     reportUnusedDisableDirectives: 'error',
   },
@@ -27,10 +29,6 @@ export default antfu({
     },
   },
 
-  nextjs: true,
-  react: true,
-  jsx: true,
-
   stylistic: {
     indent: 2,
     quotes: 'single',
@@ -42,6 +40,7 @@ export default antfu({
       }],
     },
   },
+  ...options,
 }, {
   name: 'vellone/all',
   rules: {
